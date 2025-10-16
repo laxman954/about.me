@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekshmana Perumal M | Platform Engineer & Technical Leader</title>
+    <meta name="description" content="Senior Platform Engineer with 13+ years building scalable distributed systems. Technical leader, mentor, and advocate for responsible AI and technology for social good.">
+    <meta name="keywords" content="Platform Engineer, Software Engineer, PayPal, Tax Platform, Distributed Systems, Technical Leadership, Mentorship, AI Ethics, Social Impact">
+    <meta name="author" content="Lekshmana Perumal M">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Heritage & Natural Color Palette */
+            --primary: #2d4a37;        /* Deep forest green - wisdom, growth */
+            --secondary: #5a7c65;      /* Sage green - stability, nature */
+            --accent: #d4860e;         /* Warm amber - authenticity, energy */
+            --success: #4a6741;        /* Earth green - achievement */
+            --text: #2c3e2f;          /* Dark forest - readability */
+            --light: #f7f9f7;         /* Warm off-white - natural paper */
+            --white: #fefefe;         /* Pure but warm white */
+            --heritage: #8b4513;      /* Earthy brown - heritage, roots */
+            --warm-gold: #b8860b;     /* Muted gold - achievement, value */
+            --shadow: 0 4px 6px -1px rgba(45, 74, 55, 0.12);
+            --shadow-lg: 0 10px 15px -3px rgba(45, 74, 55, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, #f7f9f7 0%, #e8ede8 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 10px 0;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 80%, var(--heritage) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding-top: 80px;
+        }
+
+        .hero-intro {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent) !important;
+            color: var(--white) !important;
+            border: 2px solid var(--accent);
+            text-decoration: none !important;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--heritage) !important;
+            color: var(--white) !important;
+            border-color: var(--heritage);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--white);
+            padding: 80px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--warm-gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        /* Fix section spacing */
+        .journey {
+            padding: 80px 0;
+        }
+
+        .skills {
+            padding: 80px 0;
+        }
+
+        .impact {
+            padding: 80px 0;
+        }
+
+        .contact {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Simple Timeline List */
+        .journey {
+            background: var(--light);
+        }
+
+        .timeline-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .timeline-item {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: fit-content;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-header {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .timeline-header:hover {
+            background: var(--light);
+        }
+
+        .timeline-summary {
+            flex: 1;
+        }
+
+        .timeline-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--heritage);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-toggle.active {
+            transform: rotate(180deg);
+        }
+
+        .timeline-content {
+            padding: 30px;
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .timeline-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .timeline-year {
+            background: var(--heritage);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .timeline-company {
+            color: var(--heritage);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .timeline-highlights li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .timeline-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-year {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .timeline-company {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .timeline-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+        }
+
+        .timeline-highlights li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Expandable Sections */
+        .expandable {
+            margin-top: 20px;
+        }
+
+        .expand-toggle {
+            background: var(--heritage);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .expand-toggle:hover {
+            background: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        .expand-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .expand-content.active {
+            max-height: 500px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        /* Skills Grid */
+        .skills {
+            background: var(--white);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+            color: var(--warm-gold);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: var(--heritage);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Impact Section */
+        .impact {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .impact .section-title,
+        .impact .section-subtitle {
+            color: var(--white);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .impact-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .impact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+            color: var(--accent);
+        }
+
+        .impact-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .impact-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--warm-gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--light);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+            color: var(--heritage);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .timeline-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .timeline-list {
+                grid-template-columns: 1fr !important;
+                gap: 15px;
+            }
+
+            .timeline-header {
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .timeline-toggle {
+                align-self: flex-end;
+            }
+
+            .timeline-content {
+                padding: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-header {
+                padding: 15px;
+            }
+
+            .timeline-content {
+                padding: 15px;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">Lekshmana</a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#skills">Expertise</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#contact">Connect</a></li>
+                </ul>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-intro">Platform Engineer & Technical Leader</div>
+                <h1>Lekshmana Perumal M</h1>
+                <div class="hero-tagline">Building Technology for Global Impact & Social Good</div>
+                <div class="hero-description">
+                    From rural Tamil Nadu to global platforms, I specialize in building scalable distributed systems that serve millions. 
+                    Currently leading engineering teams while championing responsible AI and technology for social impact. 
+                    13+ years of turning complex challenges into elegant, scalable solutions.
+                </div>
+                <div class="cta-buttons">
+                    <a href="#journey" class="btn btn-primary">Explore My Journey</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">13+</span>
+                    <div class="stat-label">Years Building Systems</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Global</span>
+                    <div class="stat-label">Multi-Country Platform Experience</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Millions</span>
+                    <div class="stat-label">Daily Transactions Processed</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Countless</span>
+                    <div class="stat-label">Hours of Mentorship</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline Section -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-subtitle">From rural beginnings to global impact - a timeline of growth, learning, and building technology for social good</p>
+            
+            <!-- Professional Career Section -->
+            <h3 style="text-align: center; color: var(--primary); margin-bottom: 30px; font-size: 1.5rem;">Professional Career</h3>
+            <div class="timeline-list">
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2024-Present</span>
+                            <h3 class="timeline-title">Staff Engineer Track - PayPal Inc.</h3>
+                            <div class="timeline-company">Leading strategic initiatives and cross-functional team management</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Leading strategic initiatives including Sales Tax Solution for Agentic Commerce, Apollo Program AWS migration, and cross-functional team management. Driving innovation with VP-level recognition and IdeaHack 2024 finalist achievement.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Leading 6-8 cross-functional engineers across multiple initiatives</li>
+                            <li>Architecting next-generation AI-driven commerce tax solutions</li>
+                            <li>PayPal OneHub idea received VP-level approval</li>
+                            <li>Built MCP client for TaxEngine and Java developer tools with Maven archetype</li>
+                            <li>Leading Sales Tax Solution for Agentic Commerce - Next-generation AI-driven tax platform</li>
+                            <li>Apollo Program leadership - Spearheading tax platform AWS cloud migration strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2023-2024</span>
+                            <h3 class="timeline-title">Senior Software Engineer - PayPal Inc.</h3>
+                            <div class="timeline-company">Technical lead for Global Tax Determination platform</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Technical lead for PayPal's Global Indirect Tax Determination platform, managing high-performance systems processing millions of daily transactions across 27+ countries while leading team development and AI integration initiatives.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Maintained sub-second API response times for business-critical operations</li>
+                            <li>Led UAE & South Africa tax platform launches</li>
+                            <li>PayPal Mentorship Core Team member</li>
+                            <li>Integrated AI-enabled tools with responsible AI focus</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2020-2023</span>
+                            <h3 class="timeline-title">Software Engineer III - PayPal Inc.</h3>
+                            <div class="timeline-company">Built foundational Indirect Tax Platform from ground up</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Built foundational Indirect Tax Platform from ground up, enabling global tax compliance across multiple markets. Led critical infrastructure migrations and modernization initiatives with zero production downtime.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Built foundational tax platform reducing global compliance complexity</li>
+                            <li>Led China DC migration and India e-Invoicing projects</li>
+                            <li>Executed Raptor upgrade and JDK 17 migration with zero downtime</li>
+                            <li>Generated 1M+ monthly invoices meeting strict SLAs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2016-2020</span>
+                            <h3 class="timeline-title">Senior Software Engineer - Altimetrik India</h3>
+                            <div class="timeline-company">Key contributor to foundational tax and consumer platforms</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Key contributor to foundational tax and consumer experience platforms. Led architectural transition from monolith to microservices, delivering rapid innovation and cross-platform impact.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Contributed to foundational tax platform serving millions globally</li>
+                            <li>Built complete VAT ID collection frontend in 3 weeks</li>
+                            <li>Led monolith to microservices migration</li>
+                            <li>Cross-platform contributions to Tax and Consumer Experiences</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2012-2016</span>
+                            <h3 class="timeline-title">Enterprise & Foundation Years</h3>
+                            <div class="timeline-company">BORN Group & Cognizant Technology Solutions</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Started as Java Trainer at Cognizant, then moved to enterprise e-commerce solutions at BORN Group. Built foundation in enterprise systems, client delivery, and mentorship that continues today.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Career start as Java Trainer developing mentorship skills</li>
+                            <li>Enterprise e-commerce platforms using SAP Hybris</li>
+                            <li>End-to-end project delivery leadership</li>
+                            <li>Complex system integration with payment gateways</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <h3 style="text-align: center; color: var(--primary); margin: 50px 0 30px 0; font-size: 1.5rem;">Education & Professional Development</h3>
+            <div class="timeline-list" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2018-2019</span>
+                            <h3 class="timeline-title">M.Sc Cyber Forensics & Information Security</h3>
+                            <div class="timeline-company">University of Madras</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Advanced degree in Cyber Forensics & Information Security completed while working full-time. Applied security principles to PayPal platform design, data classification, and access control frameworks.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Advanced cybersecurity and forensics expertise</li>
+                            <li>Applied security learning to PayPal platform architecture</li>
+                            <li>Enterprise data protection and classification systems</li>
+                            <li>Continuous learning while maintaining engineering role</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2008-2012</span>
+                            <h3 class="timeline-title">Bachelor of Engineering - Computer Science</h3>
+                            <div class="timeline-company">Mepco Schlenk Engineering College</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Computer Science Engineering degree from rural Tamil Nadu. Developed foundational understanding of technology while experiencing firsthand the digital divide that would later inspire social impact work.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Strong foundation in computer science fundamentals</li>
+                            <li>Rural background shaping social impact vision</li>
+                            <li>Early exposure to digital divide challenges</li>
+                            <li>Technical excellence despite limited resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership & Community Service Section -->
+            <h3 style="text-align: center; color: var(--primary); margin: 50px 0 30px 0; font-size: 1.5rem;">Leadership & Community Service</h3>
+            <div class="timeline-list">
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2012-Present</span>
+                            <h3 class="timeline-title">Continuous Social Impact & Volunteerism</h3>
+                            <div class="timeline-company">Multiple Community Initiatives</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Sustained commitment to social impact through technology and community service. From disaster relief coordination to supporting rural education, demonstrating how technology can serve humanitarian causes.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Active Volunteer @ SIRPIGAL (2012-Present) - Sustained 12+ years of community service</li>
+                            <li>Kerala Rescue coordination - Led technology coordination for Kerala Floods disaster relief (keralarescue.in)</li>
+                            <li>PayPal Opportunity Hack 2016 Winner - Self Help Groups loan repayment solution enabling timely loan repayments</li>
+                            <li>Kadukkarai Siragugal Foundation - Founded rural education support initiative</li>
+                            <li>Consistent focus on technology for humanitarian causes and social good</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2008-2012</span>
+                            <h3 class="timeline-title">College Leadership & Activities</h3>
+                            <div class="timeline-company">Student Leadership & Academic Excellence</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Active student leader during college years, balancing academic excellence with community responsibility. Developed leadership skills that would later influence career in mentorship and team management.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Office Bearer of Math's Club (2008-2012) - Leadership in academic activities and student community</li>
+                            <li>Student representation and community engagement during college years</li>
+                            <li>Foundation for later technical mentorship and leadership roles</li>
+                            <li>Balance of academic achievement with leadership development and community service</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header" onclick="toggleTimeline(this)">
+                        <div class="timeline-summary">
+                            <span class="timeline-year">2005-2006</span>
+                            <h3 class="timeline-title">Early Leadership Foundation</h3>
+                            <div class="timeline-company">School Leadership & Community Responsibility</div>
+                        </div>
+                        <button class="timeline-toggle">▼</button>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-description">
+                            Early demonstration of leadership qualities and commitment to community service. School Pupil Leader role developed foundational leadership skills that would later influence career in mentorship and social impact.
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>School Pupil Leader (2005-2006) - Early leadership experience</li>
+                            <li>Community responsibility and student representation</li>
+                            <li>Foundation for later mentorship and social impact work</li>
+                            <li>Leadership skills development from young age</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise & Skills</h2>
+            <p class="section-subtitle">Comprehensive technology stack with focus on scalable systems, responsible AI, and social impact</p>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <span class="skill-icon">🏗️</span>
+                    <h3>System Architecture & Engineering</h3>
+                    <p>Designing and building distributed systems that scale globally while maintaining performance and reliability.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Distributed Systems</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Event-Driven Architecture</span>
+                        <span class="skill-tag">Scalability Engineering</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                        <span class="skill-tag">Observability</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">⚙️</span>
+                    <h3>Backend Development & APIs</h3>
+                    <p>Building robust backend systems and APIs that power global platforms with enterprise-grade performance.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Spring Ecosystem</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">REST/SOAP APIs</span>
+                        <span class="skill-tag">OpenAPI</span>
+                        <span class="skill-tag">Caching Strategies</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">🌐</span>
+                    <h3>Frontend & Full-Stack Integration</h3>
+                    <p>Creating seamless user experiences through modern frontend technologies and full-stack solutions.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Design Systems</span>
+                        <span class="skill-tag">Frontend-Backend Integration</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">☁️</span>
+                    <h3>Cloud & Platform Engineering</h3>
+                    <p>Leveraging cloud-native technologies and platform engineering practices for scalable, reliable systems.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Multi-Cloud (GCP, AWS)</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Infrastructure as Code</span>
+                        <span class="skill-tag">Cloud-Native Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">🗄️</span>
+                    <h3>Data & Messaging Systems</h3>
+                    <p>Designing data architectures and messaging systems that handle enterprise-scale information flow.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Apache Kafka</span>
+                        <span class="skill-tag">Data Modeling</span>
+                        <span class="skill-tag">Stream Processing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">🔐</span>
+                    <h3>Security & Compliance</h3>
+                    <p>Implementing enterprise security practices and compliance frameworks for global financial systems.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cyber Forensics</span>
+                        <span class="skill-tag">Information Security</span>
+                        <span class="skill-tag">Data Classification</span>
+                        <span class="skill-tag">Access Control</span>
+                        <span class="skill-tag">Regulatory Compliance</span>
+                        <span class="skill-tag">Security Architecture</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">🤖</span>
+                    <h3>AI & Emerging Technologies</h3>
+                    <p>Exploring responsible AI practices and integrating emerging technologies with focus on ethical development.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Responsible AI</span>
+                        <span class="skill-tag">AI Ethics</span>
+                        <span class="skill-tag">OpenAI APIs</span>
+                        <span class="skill-tag">MCP Development</span>
+                        <span class="skill-tag">AI-Driven Development</span>
+                        <span class="skill-tag">Tech for Social Good</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <span class="skill-icon">👥</span>
+                    <h3>Leadership & Mentorship</h3>
+                    <p>Leading technical teams and developing next-generation engineers through structured mentorship and guidance.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Technical Leadership</span>
+                        <span class="skill-tag">Team Management</span>
+                        <span class="skill-tag">Mentorship Programs</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Cross-Functional Collaboration</span>
+                        <span class="skill-tag">Talent Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Impact Showcase -->
+    <section class="impact">
+        <div class="container">
+            <h2 class="section-title">Measurable Impact & Recognition</h2>
+            <p class="section-subtitle">Quantified results from building technology that scales both technically and socially</p>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <span class="impact-icon">🚀</span>
+                    <h3>Platform Scale</h3>
+                    <span class="impact-number">Millions</span>
+                    <p>Daily transactions processed through PayPal's Global Tax Determination platform across 27+ countries with enterprise-grade performance</p>
+                    <div class="expandable">
+                        <button class="expand-toggle" onclick="toggleExpand(this)">View Platform Details</button>
+                        <div class="expand-content">
+                            <h4>Global Tax Platform Impact:</h4>
+                            <p><strong>Multi-Country Operations:</strong> Successfully enabled tax compliance across UAE, South Africa, Malaysia, China, India, and European markets.</p>
+                            <p><strong>Transaction Volume:</strong> Platform processes millions of daily transactions with sub-second response times maintaining business-critical operations.</p>
+                            <p><strong>Revenue Support:</strong> Platform directly supports business operations while ensuring regulatory compliance across diverse global markets.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <span class="impact-icon">⚡</span>
+                    <h3>Performance Excellence</h3>
+                    <span class="impact-number">Sub-Second</span>
+                    <p>95th percentile API response times maintained under 30ms for business-critical tax determination operations</p>
+                    <div class="expandable">
+                        <button class="expand-toggle" onclick="toggleExpand(this)">View Performance Metrics</button>
+                        <div class="expand-content">
+                            <h4>Technical Performance:</h4>
+                            <p><strong>Response Time Excellence:</strong> Consistently maintained 95th percentile API response times under 30ms for high-volume operations.</p>
+                            <p><strong>Uptime Achievement:</strong> 99.99% platform uptime for business-critical systems supporting global operations.</p>
+                            <p><strong>Invoice Generation:</strong> Generated 1M+ monthly tax invoices meeting strict SLAs and regulatory requirements.</p>
+                            <p><strong>Scalability:</strong> Platform handles traffic spikes during peak business periods without degradation in performance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <span class="impact-icon">🌍</span>
+                    <h3>Global Reach</h3>
+                    <span class="impact-number">27+</span>
+                    <p>Countries enabled for tax compliance through platform architecture and development work</p>
+                    <div class="expandable">
+                        <button class="expand-toggle" onclick="toggleExpand(this)">View Global Impact</button>
+                        <div class="expand-content">
+                            <h4>Market Enablement:</h4>
+                            <p><strong>Recent Launches:</strong> Led technical delivery for UAE and South Africa market launches, enabling PayPal expansion into new regions.</p>
+                            <p><strong>Compliance Achievement:</strong> Successfully delivered India e-invoicing, China data center migration, and EU VAT solutions.</p>
+                            <p><strong>Regulatory Excellence:</strong> Platform meets diverse regulatory requirements across developed and emerging markets.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <span class="impact-icon">🏆</span>
+                    <h3>Innovation Recognition</h3>
+                    <span class="impact-number">Top 50</span>
+                    <p>IdeaHack 2024 Stage 2 finalist (50 out of 380 ideas) with VP-level approval for PayPal OneHub innovation</p>
+                    <div class="expandable">
+                        <button class="expand-toggle" onclick="toggleExpand(this)">View Recognition Details</button>
+                        <div class="expand-content">
+                            <h4>Innovation Leadership:</h4>
+                            <p><strong>IdeaHack 2024:</strong> Selected as Stage 2 finalist among top 50 innovative ideas from 380 company-wide submissions.</p>
+                            <p><strong>VP-Level Recognition:</strong> PayPal OneHub idea received approval from VP leadership, demonstrating strategic thinking and business acumen.</p>
+                            <p><strong>Multiple Awards:</strong> Consistent PayPal Props recognition for Innovation, Collaboration, Customer Focus, and Win Together principles.</p>
+                            <p><strong>Competition Success:</strong> PayPal Opportunity Hack 2016 winner, demonstrating sustained innovation excellence.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <span class="impact-icon">👨‍🏫</span>
+                    <h3>Mentorship Impact</h3>
+                    <span class="impact-number">10+</span>
+                    <p>Engineers mentored across teams and platforms, with 55+ structured sessions (2790+ minutes) in 2024 alone</p>
+                    <div class="expandable">
+                        <button class="expand-toggle" onclick="toggleExpand(this)">View Mentorship Details</button>
+                        <div class="expand-content">
+                            <h4>Structured Mentorship:</h4>
+                            <p><strong>PayPal Core Team:</strong> Active member of PayPal's Mentorship Core Team, influencing organization-wide talent development.</p>
+                            <p><strong>2024 Metrics:</strong> Conducted 55+ mentorship sessions totaling 2790+ minutes of structured guidance and development.</p>
+                            <p><strong>External Platforms:</strong> Scaler Academy mentor developing next-generation software engineers outside PayPal.</p>
+                            <p><strong>Team Leadership:</strong> Currently managing and developing 6-8 cross-functional engineers across multiple initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-card">
+                    <span class="impact-icon">🌱</span>
+                    <h3>Social Impact</h3>
+                    <span class="impact-number">Rural Focus</span>
+                    <p>Founded "Kadukkarai Siragugal" supporting rural education through technology access and financial assistance</p>
+                    <div class="expandable">
+                        <button class="expand-toggle" onclick="toggleExpand(this)">View Social Impact</button>
+                        <div class="expand-content">
+                            <h4>Educational Initiative:</h4>
+                            <p><strong>Kadukkarai Siragugal Foundation:</strong> Founded and lead rural education initiative providing technology access and financial support to underserved students.</p>
+                            <p><strong>Digital Equity:</strong> Bridging digital divide by providing technology access to rural communities in Tamil Nadu.</p>
+                            <p><strong>Sustainable Impact:</strong> Creating pathways to opportunities that were previously unavailable to rural students.</p>
+                            <p><strong>Tech for Good:</strong> Demonstrating how technology professionals can create meaningful social impact beyond corporate work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Enhanced -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Build Technology for Social Good Together</h2>
+            <p class="section-subtitle">Open to discussing platform engineering, responsible AI, mentorship opportunities, and technology initiatives that create positive social impact</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <a href="mailto:mlekshmanap@gmail.com">
+                        <span class="contact-icon">📧</span>
+                        <h3>Email</h3>
+                        <p>mlekshmanap@gmail.com</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://linkedin.com/in/mlekshmanap" target="_blank">
+                        <span class="contact-icon">💼</span>
+                        <h3>LinkedIn</h3>
+                        <p>Professional Network & Career</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://lekshmana.in" target="_blank">
+                        <span class="contact-icon">🌐</span>
+                        <h3>Portfolio</h3>
+                        <p>Technical Projects & Blog</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://lekshmana.medium.com" target="_blank">
+                        <span class="contact-icon">✍️</span>
+                        <h3>Medium</h3>
+                        <p>Technical Writing & Insights</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://foreststories.substack.com" target="_blank">
+                        <span class="contact-icon">📝</span>
+                        <h3>Substack</h3>
+                        <p>Stories & Social Impact</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://github.com/mlekshmanap" target="_blank">
+                        <span class="contact-icon">💻</span>
+                        <h3>GitHub</h3>
+                        <p>Open Source & Projects</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="mailto:mlekshmanap@gmail.com" class="btn btn-primary">Start a Conversation</a>
+                <a href="#journey" class="btn btn-secondary">Explore My Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Lekshmana Perumal M. Building technology for a more equitable tomorrow.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">"From rural dreams to global impact - proving that technology can be a force for equity."</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced expand/collapse functionality
+        function toggleExpand(button) {
+            const content = button.nextElementSibling;
+            const isActive = content.classList.contains('active');
+            
+            if (isActive) {
+                content.classList.remove('active');
+                button.textContent = button.textContent.replace('Hide', 'View');
+            } else {
+                content.classList.add('active');
+                button.textContent = button.textContent.replace('View', 'Hide');
+            }
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll(
+                '.timeline-item, .skill-category, .impact-card, .stat-item, .hero-content'
+            );
+            
+            animateElements.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+        });
+
+        // Active navigation highlighting with throttling
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            
+            scrollTimeout = setTimeout(() => {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-links a');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }, 10);
+        });
+
+        // Simple Timeline Toggle
+        function toggleTimeline(header) {
+            const timelineItem = header.parentElement;
+            const content = timelineItem.querySelector('.timeline-content');
+            const toggle = header.querySelector('.timeline-toggle');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                toggle.textContent = '▼';
+                toggle.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                toggle.textContent = '▲';
+                toggle.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
