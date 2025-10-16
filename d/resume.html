@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekshmana Perumal M - Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.7in;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #000;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        /* Summary */
+        .summary {
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 12px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin: 16px 0 10px 0;
+            padding-bottom: 3px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .job-company {
+            font-size: 12px;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .job-duration {
+            font-size: 11px;
+            float: right;
+            margin-top: -16px;
+        }
+
+        .job-description {
+            font-size: 11px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .achievements ul {
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+
+        .achievements li {
+            font-size: 11px;
+            margin-bottom: 3px;
+            list-style-type: disc;
+        }
+
+        .technologies {
+            font-size: 10px;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        /* Skills */
+        .skills-section {
+            margin-bottom: 12px;
+        }
+
+        .skills-category {
+            margin-bottom: 7px;
+        }
+
+        .skills-category strong {
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .skills-list {
+            font-size: 11px;
+            margin-left: 0;
+            display: inline;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+
+        .education-item .degree {
+            font-weight: bold;
+        }
+
+        /* Two column for achievements */
+        .two-column {
+            display: table;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .column {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+            padding-right: 12px;
+        }
+
+        .achievement-category {
+            margin-bottom: 10px;
+        }
+
+        .achievement-category h4 {
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .achievement-category ul {
+            margin-left: 16px;
+        }
+
+        .achievement-category li {
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        /* Key achievements grid */
+        .key-achievements {
+            font-size: 10px;
+        }
+
+        .key-achievements ul {
+            margin-left: 16px;
+            columns: 2;
+            column-gap: 16px;
+        }
+
+        .key-achievements li {
+            margin-bottom: 3px;
+            break-inside: avoid;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Lekshmana Perumal M</h1>
+            <div class="contact-info">
+                Email: mlekshmanap@gmail.com | Phone: (+91) 8220 150 482 | Location: Chennai, India<br>
+                LinkedIn: linkedin.com/in/mlekshmanap | Portfolio: lekshmana.in
+            </div>
+            <div class="title">Senior Software Engineer | Technical Lead</div>
+            <div class="subtitle">Platform Engineering • Scalable Distributed Systems • AI-Driven Engineering • Technical Leadership</div>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            Senior platform engineer with <strong>13+ years</strong> specializing in backend systems and distributed architecture, with <strong>full-stack capabilities</strong> for end-to-end solution delivery. Currently leading a cross-functional engineering team while architecting scalable systems and driving technical excellence across the platform. Proven track record leading technical initiatives, designing enterprise-driven architectures, and building production-grade microservices serving millions of transactions across global markets. Known for systematic problem-solving approach and commitment to building resilient, self-sustaining solutions.
+        </div>
+
+        <!-- Skills -->
+        <div class="section-header">Technical Expertise</div>
+        <p class="section-subtitle" style="text-align: center; font-style: italic; margin-bottom: 15px; color: #7f8c8d;">Designing, building, and optimizing scalable, reliable, and intelligent systems that power global-scale platforms.</p>
+        <div class="skills-section">
+            <div class="skills-category">
+                <strong>System Architecture & Engineering:</strong>
+                <span class="skills-list">Distributed Systems Design, Microservices & Event-Driven Patterns, Distributed Transaction Management, Scalability & Performance Optimization, Observability & Reliability Engineering</span>
+            </div>
+            <div class="skills-category">
+                <strong>Backend Engineering:</strong>
+                <span class="skills-list">Java, Spring Ecosystem (Boot, Security, Batch), Python, REST/SOAP APIs, OpenAPI, API Design, Caching & Resiliency Strategies</span>
+            </div>
+            <div class="skills-category">
+                <strong>Frontend & Integration:</strong>
+                <span class="skills-list">JavaScript, TypeScript, React, Next.js, Design Systems (Style Dictionary, JSON Tokens), Frontend-Backend Integration</span>
+            </div>
+            <div class="skills-category">
+                <strong>Data & Messaging:</strong>
+                <span class="skills-list">Oracle, MySQL, PostgreSQL, AMQ, Data Modeling & Stream Processing, Applied Data Security & Classification</span>
+            </div>
+            <div class="skills-category">
+                <strong>Cloud & Platform Engineering:</strong>
+                <span class="skills-list">Multi-Cloud Platforms (GCP, AWS), Containerization (Docker, Kubernetes), CI/CD Modernization (Jenkins → Harness Migration), Cloud-Native Design, Deployment Automation & Observability</span>
+            </div>
+            <div class="skills-category">
+                <strong>Leadership & Strategy:</strong>
+                <span class="skills-list">Multi-Level Team Leadership (Senior & Junior Engineers), Technical Mentorship & Growth Planning, Technical Roadmapping, Cross-Functional Collaboration, Strategic Communication, AI-Driven Development Practices</span>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section-header">Professional Experience</div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Senior Software Engineer</div>
+                <div class="job-duration">April 2023 – Present</div>
+                <div class="job-company">PayPal Inc., Chennai</div>
+            </div>
+            <div class="job-description">Lead Software Developer and Technical Lead managing engineering team for PayPal's Global Indirect Tax Determination and e-Invoicing platform</div>
+            <div class="achievements">
+                <ul>
+                    <li><strong>Team Leadership:</strong> Leading and mentoring a cross-functional team of 6–8 engineers, driving technical excellence, quality delivery, and professional growth.</li>
+                    <li><strong>Technical Leadership:</strong> Led multiple product/feature launches enabling tax collection and reporting capabilities across global markets</li>
+                    <li><strong>Platform Architecture:</strong> Designed South Africa and UAE Tax Determination capabilities including VAT ID collection, pricing integration, and reporting systems</li>
+                    <li><strong>Full-Stack Development:</strong> Designed and delivered end-to-end solutions spanning backend services, frontend interfaces, and system integration.</li>
+                    <li><strong>Performance Excellence:</strong> Maintained high-performance real-time tax API with sub-second response times supporting business-critical operations</li>
+                    <li><strong>AI Integration:</strong> Built AI-enabled tools and presentations emphasizing Responsible AI and developer productivity.</li>
+                    <li><strong>Developer Ecosystem:</strong> Created MCP client for TaxEngine and MCP Java tools with Maven archetype, enabling PayPal developers to easily build deployment-ready components.</li>
+                    <li><strong>Community Engagement:</strong> Active participant in PayPal cybersecurity awareness events, hackathons, and cross-team innovation initiatives.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Software Engineer III</div>
+                <div class="job-duration">April 2020 – March 2023</div>
+                <div class="job-company">PayPal Inc., Chennai</div>
+            </div>
+            <div class="job-description">Lead Developer - Strategic Tax & Invoicing Platform</div>
+            <div class="achievements">
+                <ul>
+                    <li>Built foundational Indirect Tax Platform reducing global tax-compliance complexity.</li>
+                    <li>Led China DC migration, SAFE transfer, and India e-Invoicing projects meeting government mandates.</li>
+                    <li>Executed Raptor upgrade, JDK 17 migration, and Oracle cutover with zero downtime; automated monthly invoice generation and managed vendor applications and monitoring systems.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Senior Software Engineer</div>
+                <div class="job-duration">May 2016 – April 2020</div>
+                <div class="job-company">Altimetrik India (Client: PayPal Inc.)</div>
+            </div>
+            <div class="achievements">
+                <ul>
+                    <li>Contributed to building foundational Indirect Tax and Consumer Experience platforms serving millions of transactions globally.</li>
+                    <li>Built complete VAT ID collection frontend within three weeks learning new stack.</li>
+                    <li>Drove migration from monolith to microservices improving latency and scalability.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Senior Software Engineer</div>
+                <div class="job-duration">March 2014 – April 2016</div>
+                <div class="job-company">BORN Group, Chennai</div>
+            </div>
+            <div class="achievements">
+                <ul>
+                    <li>Implemented enterprise e-commerce solutions using SAP Hybris for B2B/B2C clients.</li>
+                    <li>Led requirement analysis, sprint planning, and complex software project delivery</li>
+                </ul>
+            </div>
+            <div class="technologies"><strong>Technologies:</strong> Spring Framework, SAP Hybris, Apache Solr, Oracle, REST APIs</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Programmer Analyst</div>
+                <div class="job-duration">October 2012 – March 2014</div>
+                <div class="job-company">Cognizant Technology Solutions, Chennai</div>
+            </div>
+            <div class="achievements">
+                <ul>
+                    <li>Started as Java Trainer , Built healthcare data-management systems and trained new engineers.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section-header">Education</div>
+        <div class="education-item">
+            <span class="degree">Bachelor of Engineering, Computer Science</span> | Mepco Schlenk Engineering College | 2008 – 2012
+        </div>
+        <div class="education-item">
+            <span class="degree">Master of Science, Cyber Forensics & Information Security</span> | University of Madras | 2018 – 2019
+        </div>
+
+        <!-- Leadership -->
+        <div class="section-header">Leadership & Professional Impact</div>
+        <div class="two-column">
+            <div class="column">
+                <div class="achievement-category">
+                    <h4>Technical Leadership</h4>
+                    <ul>
+                        <li><strong>System Design Philosophy:</strong> Focus on building sustainable systems that function independently with minimal ongoing intervention</li>
+                        <li><strong>Knowledge Transfer:</strong> Recognized for ability to explain complex technical concepts with clarity and patience across diverse audiences</li>
+                        <li><strong>Process Innovation:</strong> Established engineering standards and practices adopted across teams</li>
+                        <li><strong>Technical Mentorship:</strong> Developed engineers focused on independent problem-solving through guidance and understanding</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-category">
+                    <h4>Recognition & Innovation</h4>
+                    <ul>
+                        <li><strong>PayPal Recognition:</strong> Multiple awards for Innovation, Collaboration, Customer Focus, and teamwork excellence</li>
+                        <li><strong>Competition Excellence:</strong> PayPal Opportunity Hack winner and cybersecurity competition participant</li>
+                        <li><strong>Professional Development:</strong> Mentorship Core Team member, Engineering Mentor, Hackathon Volunteer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <div class="achievement-category">
+                    <h4>Technology for Social Impact</h4>
+                    <ul>
+                        <li><strong>Responsible Technology:</strong> Advocate for tech ethics and responsible AI practices ensuring equitable technology development</li>
+                        <li><strong>Education Initiative:</strong> Founded "Kadukkarai Siragugal" supporting rural education through technology and financial assistance</li>
+                        <li><strong>Community Mentorship:</strong> Technical mentor across various platforms and college programs developing software engineers</li>
+                        <li><strong>Social Innovation:</strong> Contributor to technology solutions addressing real-world problems in developing markets</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-category">
+                    <h4>Cross-functional Excellence</h4>
+                    <ul>
+                        <li><strong>Global Delivery:</strong> Successfully delivered projects across mutliple Global markets</li>
+                        <li><strong>Stakeholder Collaboration:</strong> Worked with Pricing, Merchant Reporting, Onboarding, and Infrastructure teams</li>
+                        <li><strong>Talent Development:</strong> Part of interview community to hiring technical talent across the organization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Achievements -->
+        <div class="section-header">Key Achievements & Impact</div>
+        <div class="key-achievements">
+            <ul>
+                <li><strong>Platform Scale:</strong> Built and scaled PayPal’s Indirect Tax Determination Platform processing <b>millions of daily transactions</b> across multiple global markets.</li>
+                <li><strong>Global Compliance Enablement:</strong> Delivered end-to-end tax and e-invoicing capabilities across global markets, enabling seamless local compliance and faster country rollouts.</li>
+                <li><strong>Technical Excellence:</strong> Maintained <b>sub-second API response times</b> and <b>99.99% </b>platform uptime for business-critical operations used across PayPal’s merchant ecosystem.</li>
+                <li><strong>Infrastructure Leadership:</strong> Led modernization initiatives including Raptor upgrade, JDK 17 migration, and Jenkins → Harness CI/CD transition, achieving zero production downtime.</li>
+                <li><strong>Innovation & Recognition:</strong> Finalist in company-wide innovation challenge and PayPal Opportunity Hack winner; created developer tools adopted across PayPal engineering teams.</li>
+                <li><strong>Engineering Culture:</strong> Established sustainable communication workflows and documentation standards adopted across teams; active in cybersecurity awareness events and hackathons.</li>
+                <li><strong>Team Development:</strong> Mentored 10+ engineers across multiple teams, contributing to growth and retention; active member of PayPal’s Mentorship Core Team.</li>
+                <li><strong>Technical Thought Leadership:</strong> Active technical writer covering distributed systems, AI ethics, and engineering leadership topics, demonstrating clear communication of complex concepts and strategic thinking.</li>
+                <li><strong>Social & Community Impact:</strong> Responsible AI and tech for social good; Supporting rural education, and mentor to developers and students through community/mentorship programs.</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; font-size: 10px; margin-top: 10px; font-style: italic;">
+            References and detailed project portfolios available upon request
+        </div>
+    </div>
+</body>
+</html>
